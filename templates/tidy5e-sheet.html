@@ -1,5 +1,5 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
-	<div class="tidy5e-sheet{{#if actor.flags.tidy5e-sheet.allow-delete}} allow-delete{{/if}}">
+	<div class="tidy5e-sheet2{{#if actor.flags.tidy5e-sheet2.allow-delete}} allow-delete{{/if}}">
 		{{!-- Sheet Header --}}
 		<header class="flex tidy5e-header">
 			<div class="profile hp-{{data.attributes.hp.value}}-{{#if data.attributes.hp.temp}}{{data.attributes.hp.temp}}{{else}}0{{/if}} deathsuccess-{{data.attributes.death.success}} deathfailure-{{data.attributes.death.failure}}">
@@ -231,7 +231,7 @@
 					</ul>
 
 					{{!-- Traits --}}
-					{{> "modules/tidy5e-sheet/templates/parts/tidy5e-traits.html"}}
+					{{> "modules/tidy5e-sheet2/templates/parts/tidy5e-traits.html"}}
 				</div>
 
 				<section class="center-pane">
@@ -279,17 +279,17 @@
 
 			{{!-- Inventory Tab --}}
 			<div class="tab inventory flexcol" data-group="primary" data-tab="inventory">
-				{{> "modules/tidy5e-sheet/templates/parts/tidy5e-inventory.html" sections=inventory}}
+				{{> "modules/tidy5e-sheet2/templates/parts/tidy5e-inventory.html" sections=inventory}}
 			</div>
 
 			{{!-- Features Tab --}}
 			<div class="tab features flexcol" data-group="primary" data-tab="features">
-				{{> "modules/tidy5e-sheet/templates/parts/tidy5e-features.html" sections=features}}
+				{{> "modules/tidy5e-sheet2/templates/parts/tidy5e-features.html" sections=features}}
 			</div>
 
 			{{!-- Spellbook Tab --}}
 			<div class="tab spellbook flexcol" data-group="primary" data-tab="spellbook">
-				{{> "modules/tidy5e-sheet/templates/parts/tidy5e-spellbook.html"}}
+				{{> "modules/tidy5e-sheet2/templates/parts/tidy5e-spellbook.html"}}
 			</div>
 
 			{{!-- Biography Tab --}}
