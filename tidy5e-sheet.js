@@ -12,7 +12,7 @@ Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
 	return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
 });
 
-export class Tidy5eSheet extends ActorSheet5eCharacter {
+export class Tidy5eSheet2 extends ActorSheet5eCharacter {
 
 	get template() {
 		if (!game.user.isGM && this.actor.limited) return "modules/tidy5e-sheet2/templates/tidy5e-sheet2-ltd.html";
@@ -64,7 +64,7 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 	}
 
 	_prepareItems(data) {
-		super(data);
+		super._prepareItems(data);
 		data.data.attributes.encumberence = this._calculateEncumberence(totalWeight, data);
 	}
 
@@ -449,12 +449,12 @@ Hooks.once("init", () => {
 });
 
 // Register Tidy5e Sheet and make default character sheet
-Actors.registerSheet("dnd5e", Tidy5eSheet, {
+Actors.registerSheet("dnd5e", Tidy5eSheet2, {
 	types: ["character"],
 	makeDefault: true
 });
 
-Hooks.on("renderTidy5eSheet", (app, html, data) => {
+Hooks.on("renderTidy5eSheet2", (app, html, data) => {
 	// migrateTraits(app, html, data);
 	addFavorites(app, html, data, position);
 	addClassList(app, html, data);
@@ -472,7 +472,7 @@ Hooks.once("ready", () => {
 	console.log("Tidy5e Sheet is ready!");
 
 	if (window.BetterRolls) {
-		window.BetterRolls.hooks.addActorSheet("Tidy5eSheet");
+		window.BetterRolls.hooks.addActorSheet("Tidy5eSheet2");
 	}
 
 	game.settings.register("tidy5e-sheet2", "useRoundPortraits", {
