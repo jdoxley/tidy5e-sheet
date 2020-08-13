@@ -28,8 +28,27 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 		});
 	}
 
+	_computeEncumbrance(totalWeight, actorData) {
+		let mod = {
+			tiny: 0.5,
+			sm: 1,
+			med: 1,
+			lg: 2,
+			huge: 4,
+			grg: 8
+		  }[actorData.data.traits.size] || 1;
+		const enc = {
+			max: actorData.data.abilities.str.value * game.settings.get("tidy5e-sheet", "enc-mod") * mod,
+			value: Math.round(totalWeight * 10) / 10
+		};
+		enc.pct = Math.min(enc.value * 100 / enc.max, 99);
+		enc.encumbered  = enc.pct > (2/3);
+		return enc;
+	}
+
 	_prepareItems(data) {
 		super._prepareItems(data);
+		data.data.attributes.encumbrance = this._computeEncumbrance(totalWeight, data);
 	}
 	
 	_createEditor(target, editorOptions, initialContent) {
