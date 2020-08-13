@@ -15,8 +15,8 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
 export class Tidy5eSheet extends ActorSheet5eCharacter {
 	
 	get template() {
-		if ( !game.user.isGM && this.actor.limited ) return "modules/tidy5e-sheet/templates/tidy5e-sheet-ltd.html";
-		return "modules/tidy5e-sheet/templates/tidy5e-sheet.html";
+		if ( !game.user.isGM && this.actor.limited ) return "modules/tidy5e-sheet22/templates/tidy5e-sheet-ltd.html";
+		return "modules/tidy5e-sheet22/templates/tidy5e-sheet.html";
 	}
 	
 	static get defaultOptions() {
