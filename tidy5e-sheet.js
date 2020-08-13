@@ -592,16 +592,16 @@ Hooks.once("ready", () => {
     type: Boolean
   });
   game.settings.register("tidy5e-sheet", "enc-mod", {
-	  name: "Test",
-	  hint: "test",
+	  name: "Encumberence Modifier",
+	  hint: "The modifier for encumberence",
 	  scope: "world",
 	  config: true,
 	  default: 7.5,
 	  type: Number
   });
   game.settings.register("tidy5e-sheet", "enc-mod-high", {
-	name: "Test High",
-	hint: "test",
+	name: "Heavy Encumberence Modifier",
+	hint: "The modifier for heavy encumberence",
 	scope: "world",
 	config: true,
 	default: 10,
