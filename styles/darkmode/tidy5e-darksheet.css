@@ -628,29 +628,3 @@
 .tidy5eDark .tidy5e.sheet.actor a.inline-roll i {
   color: #121212;
 }
-
-.encumbered .arrow-up {
-	border-bottom: 4px solid #000;
-}
-
-.encumbered .arrow-down {
-	border-top: 4px solid #000;
-}
-
-.arrow-up {
-	bottom: 0;
-	width: 0;
-	height: 0;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
-	border-bottom: 4px solid #666;
-}
-
-.arrow-down {
-	top: 0;
-	width: 0;
-	height: 0;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
-	border-top: 4px solid #666;
-}
