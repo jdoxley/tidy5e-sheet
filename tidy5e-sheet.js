@@ -48,6 +48,14 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 
 	_prepareItems(data) {
 		super._prepareItems(data);
+		const inventory = {
+			weapon: { label: "DND5E.ItemTypeWeaponPl", items: [], dataset: {type: "weapon"} },
+			equipment: { label: "DND5E.ItemTypeEquipmentPl", items: [], dataset: {type: "equipment"} },
+			consumable: { label: "DND5E.ItemTypeConsumablePl", items: [], dataset: {type: "consumable"} },
+			tool: { label: "DND5E.ItemTypeToolPl", items: [], dataset: {type: "tool"} },
+			backpack: { label: "DND5E.ItemTypeContainerPl", items: [], dataset: {type: "backpack"} },
+			loot: { label: "DND5E.ItemTypeLootPl", items: [], dataset: {type: "loot"} }
+		  };
 		let [items, spells, feats, classes] = data.items.reduce((arr, item) => {
 
 			// Item details
