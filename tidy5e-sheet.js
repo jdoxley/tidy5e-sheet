@@ -27,6 +27,10 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 			height: 720
 		});
 	}
+
+	_prepareItems(data) {
+		super._prepareItems(data);
+	}
 	
 	_createEditor(target, editorOptions, initialContent) {
 		editorOptions.min_height = 200;
