@@ -120,10 +120,10 @@
 <div class="encumbrance {{#if encumbered}}encumbered{{/if}}" title="{{localize 'TIDY5E.Encumbrance'}}">
   <span class="encumbrance-bar" style="width:{{pct}}%"></span>
   <span class="encumbrance-label">{{value}} / {{max}}</span>
-  <i class="encumbrance-breakpoint encumbrance-33 arrow-up"></i>
-  <i class="encumbrance-breakpoint encumbrance-33 arrow-down"></i>
-  <i class="encumbrance-breakpoint encumbrance-66 arrow-up"></i>
-  <i class="encumbrance-breakpoint encumbrance-66 arrow-down"></i>
+  <i class="encumbrance-breakpoint arrow-up" style="left:{{encPct}}%"></i>
+  <i class="encumbrance-breakpoint arrow-down" style="left:{{encPct}}%"></i>
+  <i class="encumbrance-breakpoint arrow-up" style="left:{{encHighPct}}%"></i>
+  <i class="encumbrance-breakpoint arrow-down" style="left:{{encHighPct}}%"></i>
 </div>
 {{/with}}
 {{/if}}

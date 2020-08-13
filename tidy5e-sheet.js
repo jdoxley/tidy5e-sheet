@@ -43,6 +43,9 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 		};
 		enc.pct = Math.min(enc.value * 100 / enc.max, 99);
 		enc.encumbered  = enc.value >= actorData.data.abilities.str.value * game.settings.get("tidy5e-sheet", "enc-mod");
+		enc.encHigh = enc.value >= actorData.data.abilities.str.value * game.settings.get("tidy5e-sheet", "enc-mod-high");
+		enc.encPct = (actorData.data.abilities.str.value * game.settings.get("tidy5e-sheet", "enc-mod") * 100) / enc.max;
+		enc.encHighPct = (actorData.data.abilities.str.value * game.settings.get("tidy5e-sheet", "enc-mod-high") * 100) / enc.max;
 		return enc;
 	}
 
@@ -596,4 +599,12 @@ Hooks.once("ready", () => {
 	  default: 7.5,
 	  type: Number
   });
+  game.settings.register("tidy5e-sheet", "enc-mod-high", {
+	name: "Test High",
+	hint: "test",
+	scope: "world",
+	config: true,
+	default: 10,
+	type: Number
+});
 });
