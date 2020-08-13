@@ -526,4 +526,12 @@ Hooks.once("ready", () => {
     default: false,
     type: Boolean
   });
+  game.settings.register("tidy5e-sheet", "enc-mod", {
+	  name: "Test",
+	  hint: "test",
+	  scope: "world",
+	  config: true,
+	  default: 7.5,
+	  type: Number
+  });
 });
