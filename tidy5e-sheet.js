@@ -38,11 +38,11 @@ export class Tidy5eSheet extends ActorSheet5eCharacter {
 			grg: 8
 		  }[actorData.data.traits.size] || 1;
 		const enc = {
-			max: actorData.data.abilities.str.value * game.settings.get("tidy5e-sheet", "enc-mod") * mod,
+			max: actorData.data.abilities.str.value * 15,
 			value: Math.round(totalWeight * 10) / 10
 		};
 		enc.pct = Math.min(enc.value * 100 / enc.max, 99);
-		enc.encumbered  = enc.pct > (2/3);
+		enc.encumbered  = enc.value >= actorData.data.abilities.str.value * game.settings.get("tidy5e-sheet", "enc-mod");
 		return enc;
 	}
 
