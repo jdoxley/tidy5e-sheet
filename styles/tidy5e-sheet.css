@@ -2601,3 +2601,7 @@
 	border-right: 4px solid transparent !important;
 	border-top: 4px solid #666 !important;
 }
+
+.encumbered-bar {
+	background: red;
+}
