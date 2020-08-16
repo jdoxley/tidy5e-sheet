@@ -118,7 +118,7 @@
 {{#if isCharacter }}
 {{#with data.attributes.encumbrance}}
 <div class="encumbrance" title="{{localize 'TIDY5E.Encumbrance'}}">
-  <span class="encumbrance-bar {{#if encumbered}}encumbered-bar{{/if}}" style="width:{{pct}}%"></span>
+  <span class="encumbrance-bar {{#if encumbered}}encumbered-bar{{/if}} {{#if encHigh}}high{{/if}}" style="width:{{pct}}%"></span>
   <span class="encumbrance-label">{{value}} / {{max}}</span>
   <i class="encumbrance-breakpoint {{#if encumbered}}encumbered{{/if}} arrow-up" style="left:{{encPct}}%"></i>
   <i class="encumbrance-breakpoint {{#if encumbered}}encumbered{{/if}} arrow-down" style="left:{{encPct}}%"></i>

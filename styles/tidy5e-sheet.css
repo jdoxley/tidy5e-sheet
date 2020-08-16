@@ -2603,5 +2603,9 @@
 }
 
 .encumbered-bar {
+	background: orange !important;
+}
+
+.encumbered-bar.heavy {
 	background: red !important;
 }
